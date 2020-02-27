@@ -1,0 +1,40 @@
+GitHub is the centralized repository and Git is the software versioning control system that allows us to create a local repository. Multiple branches can also be created from that local repository.
+
+1. In your GitHub Profile: Create a new project. In my case, i have creaded a project called 'GitAndGitHub'. I have also added a 'README.md' file to that project.
+
+2. In your Windows system: Download and install Git. I have downloaded Git from the below link:
+https://git-scm.com/download/win
+
+3. In your Windows system: Create a new directory. This directory will serve as the local repository. In my case, I have created a directory called 'GitAndGitHub' in the 'Documents' folder. Note that this directory can be created anywhere.
+
+4. In your Windows system: Inside the directory, right click and select the 'Git Bash Here' option. This will open a Git Bash terminal (also known as the Git bash emulator). Ensure that the current working directory in the Git bash emulator is the newly created directory (the local repository). 
+
+5. In your Windows system: In the emulator, type the command 'git init'. The response is shown below. As shown in the message, a new folder called '.git' will be created . This folder is a hidden folder. With this command, an empty Git repository is created.
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/GitAndGitHub
+$ git init
+Initialized empty Git repository in C:/Users/indranid/Documents/GitAndGitHub/.git/
+
+6. In your GitHub Profile: Next, we need to link the empty repository in the windows system to one of the projects in GitHub. For this, go to the newly created project in GitHub. Click on the 'Clone or download' button and copy the HTTPS web url.
+
+7. In your Windows system: Type the following command in the emulator:
+ git remote add origin "<HTTPS URL of the GitHub Project>"
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/GitAndGitHub (master)
+$ git remote add origin "https://github.com/indro8307/GitAndGitHub.git"
+
+8. In your Windows system: In the emulator, fire the pull request. This will fetch the project from the centralized repository i.e. GitHub to the local repository.
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/GitAndGitHub (master)
+$ git pull origin master
+remote: Enumerating objects: 3, done.
+remote: Counting objects: 100% (3/3), done.
+remote: Compressing objects: 100% (2/2), done.
+remote: Total 3 (delta 0), reused 0 (delta 0), pack-reused 0
+Unpacking objects: 100% (3/3), 641 bytes | 19.00 KiB/s, done.
+From https://github.com/indro8307/GitAndGitHub
+ * branch            master     -> FETCH_HEAD
+ * [new branch]      master     -> origin/master
+
+
+9. In your Windows system: Now that the project has been 'pulled' to your local system, create some new folders and files. In my case i have created a new directory called 'ConfigureGitAndGitHubForWindows10' and a new file called 'Steps.txt' inside it.
