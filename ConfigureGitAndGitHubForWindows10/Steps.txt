@@ -9,7 +9,7 @@ https://git-scm.com/download/win
 
 4. In your Windows system: Inside the directory, right click and select the 'Git Bash Here' option. This will open a Git Bash terminal (also known as the Git bash emulator). Ensure that the current working directory in the Git bash emulator is the newly created directory (the local repository). 
 
-5. In your Windows system: In the emulator, type the command 'git init'. The response is shown below. As shown in the message, a new folder called '.git' will be created . This folder is a hidden folder. With this command, an empty Git repository is created.
+5. In your Windows system: In the emulator, type the command 'git init'. The response is shown below. As shown in the message, a new folder called '.git' will be created which contains all the metadata for the new repository. This folder is a hidden folder. With this command, an empty Git repository is created.
 
 indranid@N-CNU416B8WC MINGW32 ~/Documents/GitAndGitHub
 $ git init
