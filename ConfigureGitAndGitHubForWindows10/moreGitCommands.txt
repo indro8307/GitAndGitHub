@@ -1,0 +1,19 @@
+Demonstrating usage of git clone
+---------------------------------
+
+Difference between git init and git clone:
+Both these commands are used to initialize new repositories. But git clone first calls git init to create a new empty repository. 
+It then copies the data from the existing repository, and checks out a new set of working files. 
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos
+$ git clone https://github.com/indro8307/GitAndGitHub.git
+Cloning into 'GitAndGitHub'...
+remote: Enumerating objects: 18, done.
+remote: Counting objects: 100% (18/18), done.
+remote: Compressing objects: 100% (11/11), done.
+remote: Total 18 (delta 4), reused 14 (delta 3), pack-reused 0
+Unpacking objects: 100% (18/18), 4.78 KiB | 30.00 KiB/s, done.
+
+The above command creates a local repository of the existing central repository hosted in GitHub, called 'GitAndGitHub'.
+So basically it will create a directory by the name 'GitAndGitHub' in the local system. Apart from other files, it will also have 
+a folder called .git containing metadata.
