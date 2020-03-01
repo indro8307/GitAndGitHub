@@ -41,3 +41,25 @@ $ git checkout devbranch
 Switched to branch 'devbranch'
 M       ConfigureGitAndGitHubForWindows10/moreGitCommands.txt
 
+
+The command 'git rebase <branch name>' is used to fetch all changes made in the master branch to the local branch. This syncs the local branch
+with the master branch.
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub/ConfigureGitAndGitHubForWindows10 (master)
+$ git checkout devbranch
+Switched to branch 'devbranch'
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub/ConfigureGitAndGitHubForWindows10 (devbranch)
+$ git rebase master
+First, rewinding head to replay your work on top of it...
+Fast-forwarded devbranch to master.
+
+
+
+Merging changes made in the local branch to the master branch
+------------------------------------------------------------------
+
+If we develop a new feature in a local branch and we want to have that feature in the master branch as well, then we need to perform 
+the merge operation. For this, you have to switch to the master branch and execute the following command:
+git merge <local branch name>
+
