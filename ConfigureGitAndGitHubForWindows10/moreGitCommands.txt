@@ -42,6 +42,70 @@ Switched to branch 'devbranch'
 M       ConfigureGitAndGitHubForWindows10/moreGitCommands.txt
 
 
+
+How to view difference between two commits
+-----------------------------------------------
+
+Use the command 'git log' to see the list of commits.
+
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub/ConfigureGitAndGitHubForWindows10 (master)
+$ git log
+commit 4934cbc171de034060dc33031d8681c0d9407e4e (HEAD -> master, origin/master, origin/HEAD)
+Author: Das <indranil.das@xxxx.com>
+Date:   Sun Mar 1 20:29:03 2020 +0530
+
+    updating moreGitCommands.txt about git merge
+
+commit debea4b07792baf827a420f34dd76d71906b7485 (devbranch)
+Author: Das <indranil.das@xxxx.com>
+Date:   Sun Mar 1 20:19:14 2020 +0530
+
+    updating moreGitCommands.txt in devbranch
+
+commit d656de73ff0c60432e86fd04434b14b433037d92
+Author: Das <indranil.das@xxxx.com>
+Date:   Sun Mar 1 19:57:10 2020 +0530
+
+    Updating info about git branch and git checkout
+
+commit 20049d1bdaa4983b5d72386906481a21d5d67341
+Author: Das <indranil.das@xxxx.com>
+Date:   Sat Feb 29 22:40:13 2020 +0530
+
+    updated file with info on git clone
+
+commit 9a8bbc746a0bd238813fb70f78816f3c7db49fb1
+Author: Das <indranil.das@xxxx.com>
+Date:   Sat Feb 29 21:33:21 2020 +0530
+
+    updating info on gin init command
+
+commit ae003fcb39f836effa4e089f8bd00022d117a9da
+Author: Das <indranil.das@xxxx.com>
+Date:   Fri Feb 28 00:01:19 2020 +0530
+
+    commiting git-commands.txt
+
+commit 34b4dca38ecb843760d48503307010277fb4b522
+Author: Das <indranil.das@xxxx.com>
+Date:   Thu Feb 27 23:55:21 2020 +0530
+
+    this is commit 2
+
+commit 456a143dc0c8208dc3cfa56fb22caad4635d281e
+Author: Das <indranil.das@xxxx.com>
+Date:   Thu Feb 27 22:14:42 2020 +0530
+
+    this is commit 1
+
+commit 119289603d27d737f7e39be73aafce357b11337a
+Author: indro8307 <indra_neel83@yahoo.co.in>
+Date:   Tue Feb 25 23:12:48 2020 +0530
+
+    Initial commit
+
+
 The command 'git rebase <branch name>' is used to fetch all changes made in the master branch to the local branch. This syncs the local branch
 with the master branch.
 
@@ -55,6 +119,49 @@ First, rewinding head to replay your work on top of it...
 Fast-forwarded devbranch to master.
 
 
+Then use the 'git diff' command to view changes between two commits
+
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub/ConfigureGitAndGitHubForWindows10 (master)
+$ git diff 20049d1b ae003fcb
+diff --git a/ConfigureGitAndGitHubForWindows10/Steps.txt b/ConfigureGitAndGitHubForWindows10/Steps.txt
+index 36f5ebb..588804b 100644
+--- a/ConfigureGitAndGitHubForWindows10/Steps.txt
++++ b/ConfigureGitAndGitHubForWindows10/Steps.txt
+@@ -9,7 +9,7 @@ https://git-scm.com/download/win
+
+ 4. In your Windows system: Inside the directory, right click and select the 'Git Bash Here' option. This will open a Git Bash terminal (also known as the Git bash emulator). Ensure that the current working directory in the Git bash emulator is the newly created directory (the local repository).
+
+-5. In your Windows system: In the emulator, type the command 'git init'. The response is shown below. As shown in the message, a new folder called '.git' will be created which contains all the metadata for the new repository. This folder is a hidden folder. With this command, an empty Git repository is created.
++5. In your Windows system: In the emulator, type the command 'git init'. The response is shown below. As shown in the message, a new folder called '.git' will be created . This folder is a hidden folder. With this command, an empty Git repository is created.
+
+ indranid@N-CNU416B8WC MINGW32 ~/Documents/GitAndGitHub
+ $ git init
+diff --git a/ConfigureGitAndGitHubForWindows10/moreGitCommands.txt b/ConfigureGitAndGitHubForWindows10/moreGitCommands.txt
+deleted file mode 100644
+index 4715a8b..0000000
+--- a/ConfigureGitAndGitHubForWindows10/moreGitCommands.txt
++++ /dev/null
+@@ -1,19 +0,0 @@
+-Demonstrating usage of git clone
+----------------------------------
+-
+-Difference between git init and git clone:
+-Both these commands are used to initialize new repositories. But git clone first calls git init to create a new empty repository.
+-It then copies the data from the existing repository, and checks out a new set of working files.
+-
+-indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos
+-$ git clone https://github.com/indro8307/GitAndGitHub.git
+-Cloning into 'GitAndGitHub'...
+-remote: Enumerating objects: 18, done.
+-remote: Counting objects: 100% (18/18), done.
+-remote: Compressing objects: 100% (11/11), done.
+-remote: Total 18 (delta 4), reused 14 (delta 3), pack-reused 0
+-Unpacking objects: 100% (18/18), 4.78 KiB | 30.00 KiB/s, done.
+-
+-The above command creates a local repository of the existing central repository hosted in GitHub, called 'GitAndGitHub'.
+-So basically it will create a directory by the name 'GitAndGitHub' in the local system. Apart from other files, it will also have
+-a folder called .git containing metadata.
 
 Merging changes made in the local branch to the master branch
 ------------------------------------------------------------------
