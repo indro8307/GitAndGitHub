@@ -74,3 +74,55 @@ Updating d656de7..debea4b
 Fast-forward
  .../moreGitCommands.txt                            | 22 ++++++++++++++++++++++
  1 file changed, 22 insertions(+)
+
+
+
+
+Reverting back to a previous commit:
+--------------------------------------
+
+If you want to go back to a particular commit, use the 'git revert' command followed by a 'git push origin master'.
+
+git revert <hash of commit>  (The hash should be of the commit you want to remove)
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub/ConfigureGitAndGitHubForWindows10 (master)
+$ git revert 36c765970eaf24827a8c3880778d2cb26adeb00a
+[master 6d19701] Revert "updating moreGitCommands.txt with info on git diff and git log"
+ Committer: Das <indranil.das@nokia.com>
+Your name and email address were configured automatically based
+on your username and hostname. Please check that they are accurate.
+You can suppress this message by setting them explicitly. Run the
+following command and follow the instructions in your editor to edit
+your configuration file:
+
+    git config --global --edit
+
+After doing this, you may fix the identity used for this commit with:
+
+    git commit --amend --reset-author
+
+ 1 file changed, 107 deletions(-)
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub/ConfigureGitAndGitHubForWindows10 (master)
+$ git status
+On branch master
+Your branch is ahead of 'origin/master' by 1 commit.
+  (use "git push" to publish your local commits)
+
+nothing to commit, working tree clean
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub/ConfigureGitAndGitHubForWindows10 (master)
+$ git push origin master
+Enumerating objects: 7, done.
+Counting objects: 100% (7/7), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (4/4), done.
+Writing objects: 100% (4/4), 438 bytes | 109.00 KiB/s, done.
+Total 4 (delta 2), reused 0 (delta 0)
+remote: Resolving deltas: 100% (2/2), completed with 2 local objects.
+To https://github.com/indro8307/GitAndGitHub.git
+   36c7659..6d19701  master -> master
+
+
+For more details:
+https://stackoverflow.com/questions/4114095/how-do-i-revert-a-git-repository-to-a-previous-commit
