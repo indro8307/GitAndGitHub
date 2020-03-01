@@ -17,3 +17,27 @@ Unpacking objects: 100% (18/18), 4.78 KiB | 30.00 KiB/s, done.
 The above command creates a local repository of the existing central repository hosted in GitHub, called 'GitAndGitHub'.
 So basically it will create a directory by the name 'GitAndGitHub' in the local system. Apart from other files, it will also have 
 a folder called .git containing metadata.
+
+
+
+Parallel development with Git using branches
+--------------------------------------------------
+
+It is possible to create multiple local branches from the master branch using the command 'git branch <branch name>'. Changes made in the local branches wont be reflected in the master branch unless they are merged. The command 'git branch' is also used to list all the branches created, with the current branch being indicated by a '*' character.
+
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub (master)
+$ git branch devbranch
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub (master)
+$ git branch
+  devbranch
+* master
+
+The command 'git checkout <branch name>' is used to switch to another branch.
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub (master)
+$ git checkout devbranch
+Switched to branch 'devbranch'
+M       ConfigureGitAndGitHubForWindows10/moreGitCommands.txt
+
