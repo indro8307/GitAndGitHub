@@ -63,3 +63,14 @@ If we develop a new feature in a local branch and we want to have that feature i
 the merge operation. For this, you have to switch to the master branch and execute the following command:
 git merge <local branch name>
 
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub/ConfigureGitAndGitHubForWindows10 (devbranch)
+$ git checkout master
+Switched to branch 'master'
+Your branch is up to date with 'origin/master'.
+
+indranid@N-CNU416B8WC MINGW32 ~/Documents/Repos/GitAndGitHub/ConfigureGitAndGitHubForWindows10 (master)
+$ git merge devbranch
+Updating d656de7..debea4b
+Fast-forward
+ .../moreGitCommands.txt                            | 22 ++++++++++++++++++++++
+ 1 file changed, 22 insertions(+)
